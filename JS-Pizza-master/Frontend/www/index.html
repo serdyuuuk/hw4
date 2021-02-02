@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- LESS основний файл -->
-    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 
@@ -16,63 +16,140 @@
 </head>
 <body>
 <div id="cart"></div>
-<div class="container">
-    <div class="row" id="pizza_list">
+<div class="container-fluid">
+    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 row" id="pizza_list">
+        <nav class="navbar navbar-fixed-top upPanel">
+            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6 leftPanel"></div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 rightPanel"></div>
+        </nav>
+        <div class="col-md-12 allPizzaLabel">Усі піци
+            <div class="rounded-circle numberLabel">3</div>
+        </div>
+        <div class="btn-group btn-group-toggle col-md-12 typeOfPizza" data-toggle="buttons">
+            <label class="btn btn-warning active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Усі
+            </label>
+            <label class="btn btn-warning">
+                <input type="radio" name="options" id="option2" autocomplete="off"> М'ясні
+            </label>
+            <label class="btn btn-warning">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Вега
+            </label>
+        </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_1.jpg">
+                <span class="badge newBadge">Новинка</span>
+                <img src="assets/images/pizza_1.jpg" class="img-fluid">
 
                 <div class="caption"><h3>Thumbnail label</h3>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="columns">
+                    <div class="pizzaColumn">
+                            <img src="assets/images/size-icon.svg">
+                            30
+                            <br><img src="assets/images/weight.svg">
+                            370</br>
+                        <p>
+                        <div class="price">99</div>
+                        <div>грн.</div>
+                        <a href="#" class="btn btn-warning">Купити</a>
+                    </div>
+                    <div class="pizzaColumn">
+                        <img src="assets/images/size-icon.svg">
+                        40
+                        <br><img src="assets/images/weight.svg">
+                        660</br>
+                        <p>
+                        <div class="price">149</div>
+                        <div>грн.</div>
+                    <a href="#" class="btn btn-warning">Купити</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
+                <span class="badge popularBadge">Популярна</span>
+                <img src="assets/images/pizza_2.jpg" class="img-fluid">
 
                 <div class="caption"><h3>Thumbnail label</h3>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="columns">
+                        <div class="pizzaColumn">
+                            <img src="assets/images/size-icon.svg">
+                            30
+                            <br><img src="assets/images/weight.svg">
+                            390</br>
+                            <p>
+                            <div class="price">105</div>
+                            <div>грн.</div>
+                            <a href="#" class="btn btn-warning">Купити</a>
+                        </div>
+                        <div class="pizzaColumn">
+                            <img src="assets/images/size-icon.svg">
+                            40
+                            <br><img src="assets/images/weight.svg">
+                            680</br>
+                            <p>
+                            <div class="price">165</div>
+                            <div>грн.</div>
+                            <a href="#" class="btn btn-warning">Купити</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_3.jpg">
+                <img src="assets/images/pizza_3.jpg" class="img-fluid">
 
                 <div class="caption"><h3>Thumbnail label</h3>
 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <div class="columns">
+                        <div class="pizzaColumn">
+                            <img src="assets/images/size-icon.svg">
+                            30
+                            <br><img src="assets/images/weight.svg">
+                            320</br>
+                            <p>
+                            <div class="price">85</div>
+                            <div>грн.</div>
+                            <a href="#" class="btn btn-warning">Купити</a>
+                        </div>
+                        <div class="pizzaColumn">
+                            <img src="assets/images/size-icon.svg">
+                            40
+                            <br><img src="assets/images/weight.svg">
+                            610</br>
+                            <p>
+                            <div class="price">133</div>
+                            <div>грн.</div>
+                            <a href="#" class="btn btn-warning">Купити</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 order">
+        dsfsdb
+    </div>
 </div>
 
 <!-- jQuery JavaScript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 <!--Bootsrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
 <!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->

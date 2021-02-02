@@ -1,10 +1,93 @@
+.container{
+  min-width: 600px;
+}
+.row{
+  margin-right: 0;
+}
+.order{
+  margin-left: 15px;
+}
+.leftPanel{
+  background: black;
+}
+.rightPanel{
+  background: red;
+  height: 100vh;
+}
 .pizza-card {
   img {
     max-width: 250px;
   }
 
   h3 {
-    color: @mainColor;
-    background-color: lighten(@mainColor, 45%);
+    color: @backgroundButtonColor;
+    font-weight: bold;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .badge {
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    font-size: large;
+    padding: 5px;
+  }
+
+  .newBadge {
+    background: firebrick;
+  }
+
+  .popularBadge {
+    background: green;
+  }
+  .columns{
+    text-align: center;
+    letter-spacing: 40px;
+    @media(max-width: 1200px) {
+      letter-spacing: 20px;
+    }
+  }
+
+  .pizzaColumn {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing:normal;
+    .price {
+      font-size: x-large;
+    }
+  }
+}
+
+.typeOfPizza {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    width: 90px;
+  }
+}
+
+.allPizzaLabel {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: 20px;
+  .numberLabel {
+    color: white;
+    display: inline-block;
+    font-size: medium;
+    background: @backgroundButtonColor;
+    border-radius: 50%;
+    @sizeLabel: 20px;
+    width: @sizeLabel;
+    height: @sizeLabel;
   }
 }
