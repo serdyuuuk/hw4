@@ -1,93 +1,156 @@
-.container{
-  min-width: 600px;
-}
-.row{
-  margin-right: 0;
-}
-.order{
-  margin-left: 15px;
-}
-.leftPanel{
-  background: black;
-}
-.rightPanel{
-  background: red;
-  height: 100vh;
-}
-.pizza-card {
-  img {
-    max-width: 250px;
+@upPanelHeight: 50px;
+#cart {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  box-sizing: border-box;
+  border: 1px;
+  @media (max-width: 600px) {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
   }
 
-  h3 {
-    color: @backgroundButtonColor;
-    font-weight: bold;
-  }
+  .rightPanel {
+    background: #e5e4e4;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    float: right;
+    width: 100%;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
 
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
+    .rightPanelLabel {
+      font-weight: bold;
+      display: block;
+      background: white;
+      height: @upPanelHeight;
+      font-size: medium;
+      vertical-align: center;
 
-  .badge {
-    position: absolute;
-    right: -5px;
-    top: -10px;
-    font-size: large;
-    padding: 5px;
-  }
+      .labelOrder {
+        margin-left: 8px;
+        margin-top: @upPanelHeight/2-13px;
+        display: inline-block;
+      }
 
-  .newBadge {
-    background: firebrick;
-  }
+      .numberLabel {
+        text-align: center;
+        color: white;
+        display: inline-block;
+        background: @backgroundButtonColor;
+        border-radius: 50%;
+        width: @sizeLabel;
+        height: @sizeLabel;
+      }
 
-  .popularBadge {
-    background: green;
-  }
-  .columns{
-    text-align: center;
-    letter-spacing: 40px;
-    @media(max-width: 1200px) {
-      letter-spacing: 20px;
+      .btn {
+        margin-top: @upPanelHeight/2-9px;
+        margin-right: 5px;
+        padding: 0;
+        display: block;
+        float: right;
+        font-size: x-small;
+        color: grey;
+        border: 0;
+        outline: 0 !important;
+      }
     }
   }
 
-  .pizzaColumn {
-    display: inline-block;
-    width: 40%;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing:normal;
-    .price {
-      font-size: x-large;
+  .buyPizzasList {
+    .buyPizza {
+      border: 0;
+      border-bottom-width: 1px;
+      border-bottom-color: darkgrey;
+      border-style: solid;
+      padding-bottom: 10px;
+      .infAboutPizza {
+        display: inline-block;
+        margin-left: 8px;
+
+        .pizzaName {
+          color: @backgroundButtonColor;
+        }
+
+        .weight {
+          margin-left: 10px;
+        }
+
+        .price {
+          margin-top: 10px;
+          font-weight: bold;
+          font-size: large;
+
+          .btn {
+            height: 28px;
+            margin-right: 5px;
+            margin-left: 5px;
+            width: 28px;
+            border-radius: 50%;
+            outline: 0 !important;
+            position: relative;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            text-indent: 0;
+            .label {
+              font-size: x-large;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-57%, -50%);
+              padding: 0;
+            }
+            .minus{
+              top: 43%;
+            }
+
+            .delete{
+              top: 46%;
+              color: @backgroundButtonColor;
+              font-size: large;
+            }
+          }
+          .deleteButton{
+            margin-left: 15px;
+          }
+          .number{
+            display: inline-block;
+            font-size: medium;
+            font-weight: normal;
+          }
+        }
+      }
+      .img{
+        display: block;
+        float: right;
+        margin-top: 9px;
+        overflow: hidden;
+        position: relative;
+        background: #FFFFFF;
+        height: 90px;
+        width: 45px;
+        img{
+          border-radius: 50%;
+          width: 200%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 }
 
-.typeOfPizza {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
 
-  .btn {
-    width: 90px;
-  }
-}
 
-.allPizzaLabel {
-  text-align: center;
-  font-size: x-large;
-  font-weight: bold;
-  margin-top: 20px;
-  .numberLabel {
-    color: white;
-    display: inline-block;
-    font-size: medium;
-    background: @backgroundButtonColor;
-    border-radius: 50%;
-    @sizeLabel: 20px;
-    width: @sizeLabel;
-    height: @sizeLabel;
-  }
-}
+
