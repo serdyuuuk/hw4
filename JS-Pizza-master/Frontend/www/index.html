@@ -15,10 +15,28 @@
 
 </head>
 <body>
-<div class="container-fluid col-lg-9 col-md-8 col-sm-7 col-xs-6">
+<div class="container-fluid col-lg-9 col-md-8 col-sm-8 col-xs-6">
     <div class="row" id="pizza_list">
-        <nav class="navbar navbar-fixed-top col-lg-9 col-md-8 col-sm-7 col-xs-6  upPanel">
-            <div class="leftPanel"></div>
+        <nav class="navbar navbar-fixed-top col-lg-9 col-md-8 col-sm-8 col-xs-6  upPanel">
+            <div class="leftPanel">
+                <div class="companyName">
+                    <img src="assets/images/discount.svg" class="picture">
+                    <div class="labelKMA">
+                        <div class="PIZZA">PIZZA</div>
+                        <div>KMA</div>
+                    </div>
+                </div>
+                <div class="top">
+                    <div class="phoneNumber label">(044) 222 5 222</div>
+                    <div class="visible-lg-inline-block visible-md-inline-block visible-sm-inline-block label">24
+                        години/7
+                        днів на тиждень
+                    </div>
+                    <div class="visible-lg-inline-block visible-md-inline-block label">Безкоштовна доставка піци</div>
+                    <button type="button" class="btn btn-warning loginButton">Ввійти</button>
+                </div>
+                <div class="hidden-xs pizza">Піца</div>
+            </div>
         </nav>
         <div class="col-md-12 allPizzaLabel">Усі піци
             <div class="rounded-circle numberLabel">3</div>
@@ -43,12 +61,13 @@
                 <input type="radio" name="options" id="option6" autocomplete="off"> Вега
             </label>
         </div>
+        <div class="pizzas">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail pizza-card">
                 <span class="badge newBadge">Новинка</span>
                 <img src="assets/images/pizza_1.jpg" class="img-fluid">
 
-                <div class="caption"><h3>Американо </h3>
+                <div class="caption"><h3 class="namePizza">Американо </h3>
                     <div class="typeOfPizza">М'ясна</div>
                     <p class="description">Соус BBQ, соус маринара, сир моцарела, гірчиця, філе куряче sous-vide,
                         ковбаски мисливські, пепероні, конфітюр
@@ -146,9 +165,20 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="infAboutCompany">
+            <div class="firstInf">Pizza.22 - практичний проект в межах курсу JavaScript в Києво-Могилянській Академії</div>
+            <div class="secondInf">Доставка піци не здійснюється</div>
+        </div>
     </div>
 </div>
-<div id="cart" class="col-lg-3 col-md-4 col-sm-5 col-xs-6 navbar">
+<div class="sale">
+    <img src="assets/images/discount.svg" class="picture">
+    <div class="labelOne">ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+    <div class="labelTwo">-20%</div>
+</div>
+<div class="shadow"></div>
+<div id="cart" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 navbar">
     <div class="rightPanel">
         <div class="rightPanelLabel">
             <div class="rounded-circle labelOrder">Замовлення</div>
@@ -196,6 +226,11 @@
                     <img src="assets/images/pizza_3.jpg">
                 </div>
             </div>
+        </div>
+        <div class="buy">
+            <div class="labelBuy">Сума замовлення</div>
+            <div class="price">311 грн</div>
+            <button type="button" class="btn btn-warning buyButton">Замовити</button>
         </div>
     </div>
 </div>

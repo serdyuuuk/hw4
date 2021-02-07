@@ -1,11 +1,11 @@
 @mainColor: #0000ff;
-@backgroundButtonColor: orange;
+@backgroundButtonColor: #ea862e;
 @sizeLabel: 22px;
 body {
-  min-width: 300px;
+  min-width: 350px;
   .container-fluid{
     padding-right: 0;
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       width: 100%;
     }
   }
@@ -15,14 +15,81 @@ body {
       padding-left: 0;
       padding-right: 0;
       box-sizing: border-box;
-      @media (max-width: 600px) {
+      @media (max-width: 640px) {
         width: 100%;
         position: absolute;
       }
       .leftPanel {
+        color: white;
         background: rgba(0, 0, 0, 0.8);
         height: @upPanelHeight;
         z-index: 5;
+        .companyName{
+          .picture{
+            width: @upPanelHeight;
+            transform: rotate(180deg);
+            position: absolute;
+            bottom: -8px;
+            left: 10px;
+          }
+          .labelKMA{
+            margin-top: 15px;
+            line-height: 90%;
+            text-align: center;
+            font-size: x-large;
+            font-weight: normal;
+            .PIZZA{
+              font-size: large;
+            }
+          }
+          border-width: 1px;
+          border-color: #d16200;
+          border-bottom: 0;
+          border-top: 0;
+          border-style: solid;
+          box-sizing: border-box;
+          margin-left: 10px;
+          float: left;
+          width: @upPanelHeight;
+          height: @upPanelHeight;
+          background: @backgroundButtonColor;
+        }
+        .top {
+          box-sizing: border-box;
+          .label {
+            font-weight: normal;
+            font-size: small;
+            color: #e5e4e4;
+          }
+
+          .phoneNumber {
+            padding-left: 0;
+            margin-top: 11px;
+            display: inline-block;
+          }
+          .loginButton{
+            margin-top: 5px;
+            @media(max-width: 750px){
+              margin-top: 45px;
+            }
+            display: block;
+            float: right;
+            height: 30px;
+            outline: 0 !important;
+          }
+          border-style: solid;
+          border-bottom-color: #e5e4e4;
+          border-width: 0;
+          border-bottom-width: 1px;
+          margin-right: 5px;
+          margin-left: @upPanelHeight+15px;
+          padding-bottom: 8.6px;
+        }
+        .pizza{
+          display: inline-block;
+          margin-left: 5px;
+          margin-top: 9px;
+        }
       }
     }
 
@@ -36,7 +103,7 @@ body {
         color: white;
         display: inline-block;
         font-size: medium;
-        background: @backgroundButtonColor;
+        background: #f0ad4e;
         border-radius: 50%;
         width: @sizeLabel;
         height: @sizeLabel;
@@ -70,6 +137,9 @@ body {
       .img-fluid {
         max-width: 100%;
         height: auto;
+      }
+      .namePizza{
+        color: @backgroundButtonColor;
       }
       .typeOfPizza{
         text-align: left;
@@ -130,6 +200,81 @@ body {
           }
         }
       }
+    }
+    background: #fffff5;
+    margin-bottom:@upPanelHeight*1.5;;
+    .infAboutCompany{
+      border-style: solid;
+      border-width: 0;
+      border-top-width: 1px;
+      border-color:darkgrey;
+      color: darkgrey;;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      height: @upPanelHeight*1.5;
+      display: block;
+      background: white;
+      .firstInf{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: @upPanelHeight*0.35;
+      }
+      .secondInf{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 7px;
+      }
+    }
+  }
+  .shadow{
+    z-index: 5;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
+    height: 20px;
+    border-top-width: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: -20px;
+  }
+  .sale{
+    width: @upPanelHeight;
+    height: @upPanelHeight*1.2;
+    background: @backgroundButtonColor;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    border-width: 1px;
+    border-color: #d16200;
+    border-bottom: 0;
+    border-top: 0;
+    border-style: solid;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: small;
+    font-weight:bold ;
+    color: white;
+    .labelOne{
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .labelTwo{
+      margin-left: 5px;
+      margin-right: 5px;
+      border-width: 1px;
+      border-color: #d16200;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-style: dotted;
+      padding-top: 5px;
+    }
+    img{
+      width: @upPanelHeight;
+      position: absolute;
+      top: -8px;
+      left: -1px;
     }
   }
 }
